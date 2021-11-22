@@ -14,6 +14,16 @@
         <h1>#{testView.string}</h1>
         <h:form id="frmTest">
             
+            <h2>We Love PrimeFaces!!</h2>
+            <p:autoComplete id="animal" multiple="true" value="#{testView.animalList}"
+                            completeMethod="#{testView.acAnimal}" readonly="true"
+                            var="animal" itemLabel="#{animal.type}, #{animal.name}" itemValue="#{animal}"
+                            forceSelection="true" scrollHeight="250">
+                <p:column>
+                    <h:outputText style="vertical-align: middle; margin-left: .5rem" value="#{animal.name}"/>
+                </p:column>
+            </p:autoComplete>
+            
         </h:form>
 
     </h:body>
